@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Counselling</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="inddex.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+    <!-- <button  id="myBtn" class="btn btn-outline-danger">Need help?</button> -->
+
+
+
+
+
+<button id="myBtn" class="open-button btn btn-outline-danger" onclick="openForm()">Need help?</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Request A Callback</h1>
+      Please fill the details below and someone from our team will get in touch with you.
+
+    <input type="text" placeholder="Enter Name" name="name" required>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+
+    <button type="submit" class="btn-danger" style="padding: 8px; width: 110px;">Submit</button>
+    <button type="button" class="btn-danger"  style="padding: 8px; width: 110px;" onclick="closeForm()">Close</button>
+  </form>
+</div>
+    
+    <!------------------------navbar---------------------->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+      <a class="navbar-brand" href="#">
+        <img src="./images/undraw_environment_iaus.png" width="50" height="40" class="d-inline-block align-top" alt="">
+        YourDOST
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+Experts
+          <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+Discussions 
+          <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+COVID-19 Resources 
+          <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+Self Test 
+          <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+Programs 
+          <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+For Business
+          <span class="sr-only">(current)</span></a>
+          </li>
+          
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <!-- <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button> -->
+          <button type="button" class="btn btn-danger my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" >Login</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          Email/Username :<input type="text"> <br> <br>
+         Password : <input type="password">
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </form>
+      </div>
+    </nav>
+            
+
+
+     
+          <!------------------------background---------------------->
+
+    <div class="background">
+
+        <div class="container position">
+            <div class="row" id="back">
+                <h1>Get help. Get better.</h1> <br>
+                <h3>No matter what's troubling you, get the support you need, right here, right now.</h3>
+                <!-- <div class="col-md-6"> -->
+                    <button class="btn btn-danger" type="submit">Chat Now</button>
+                <!-- </div> -->
+                <!-- <div class="col-md-6"> -->
+                    <button class="btn btn-danger" type="submit">Book Appointment</button>
+                <!-- </div> -->
+                <h5>🔴26 people are currently seeking guidance.</h5>
+            </div>
+        </div>
+    </div>
+
+
+        <!------------------------badges---------------------->
+    <div class="container">
+    <div class="row">
+        <div class="col">
+         <center></center> <i class="fa fa-id-badge" style="font-size:36px"></i></center> 
+          <p>PRIVATE & CONFIDENTIAL</p>
+        </div>
+        <div class="col">
+          <i class='fas fa-glasses' style='font-size:36px; text-align: center;'></i>
+          <p>ANONYMOUS DISCUSSIONS</p>
+        </div>
+        <div class="col">
+          <i class='fas fa-stopwatch' style='font-size:36px'></i>
+          <p>24X7 ROUND THE CLOCK SUPPORT</p>
+        </div>
+        <div class="col">
+          <i class="fa fa-laptop" style="font-size:36px"></i>
+          <p>CONDUCTED OVER 25 LAKHS+ SESSIONS</p>
+        </div>
+    </div>
+    
+    <hr style=" background-color: rgb(255, 0, 85);">
+
+    <h1 style="text-align: center;">Three steps YourDOST can help you</h1>
+    <div class="card-group">
+        <div class="card" style="border: none;">
+            <img src="./images/undraw_working_late_pukg.png" class="card-img-top" alt="..."  height="300rem">
+            <div class="card-body">
+              <h5 class="card-title"><b> Step 1: </b><br> Connect with your experts</h5>
+              <p class="card-text">Chat anonymously with a YourDOST expert who's here to help you and not judge you.</p>
+            </div>
+        </div>
+        <div class="card" style="border: none;">
+            <img src="./images/undraw_faq_rjoy.png" class="card-img-top" alt="..." height="300rem">
+            <div class="card-body">
+                <h5 class="card-title"><b> Step 2: </b> <br> Discuss your Concerns</h5>
+                <p class="card-text">Open up to your Expert in a space where you get the guidance you need, and your concerns get the attention they deserve.</p>
+            </div>
+        </div>
+        <div class="card" style="border: none;">
+          <img src="./images/undraw_High_five_u364.png" class="card-img-top" alt="..." height="300rem">
+          <div class="card-body">
+            <h5 class="card-title"><b> Step 3: </b> <br> Unleash a Better You</h5>
+            <p class="card-text">With 24X7 support from our experts, bid goodbye to your old self and be on your way to becoming a better you.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-------------------------------box------------------------------------->
+
+    <div class="box">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+               <img src="./images/undraw_chat_1wo5.png" alt="" height="150" width="150" style="float: left;">
+               <h4 style="color: rgb(248, 9, 69); font-weight: bold">Online Chat Sessions</h4>
+               <p>Chat anonymously with an expert of your choice. This service is available to you anytime, anywhere.</p>
+                </div>
+              <div class="col-sm">
+                <img src="./images/undraw_video_files_fu10.png" alt="" height="150" width="150" style="float: left;">
+                <h4 style="color: rgb(248, 9, 69); font-weight: bold">Voice/Video Calls</h4>
+               <p>Speak to our experts or get on a call with them. Get personalized attention right when you need it.</p>
+                </div>
+              <div class="col-sm">
+                <img src="./images/undraw_live_collaboration_2r4y.png" alt="" height="150" width="150" style="float: left;">
+                <h4 style="color: rgb(248, 9, 69); font-weight: bold">Face to Face Sessions</h4>
+               <p>Connect 1-on-1 in-person with an expert of your choice.</p>
+                </div>
+            </div>
+          </div>
+    </div>
+    <br> <br>
+
+    <!------------------------------------------support-------------------------------------->
+
+    <div class="" style="background-color: rgb(252, 240, 241);"> <br>
+    <h2 style="text-align: center; line-height: 3rem;">Find Instant Support</h2>
+    <h5 style="text-align: center;">1000+ Experts with years of experience in counselling and successfully helping people overcome their emotions</h5>
+    <div class="card-group">
+        <div class="card box" style="height: 40rem">
+            <img src="./images/dr-jini-k-gopinath-1482473101-585cbe8e01267.jpg" class="card-img-top" alt="..." height="250" " style="border-radius: 50%; padding: 0px; ">
+            <div class="card-body">
+              <h5 class="card-title"><b> Dr. Jini K. Gopinath</b><br> Clinical Psychologist, Hypnotherapist</h5>
+              <p class="card-text">Over 2-decade experience in building resilient organisations, high performing teams and happier individuals</p>
+            </div>
+        </div>
+        <div class="card box" style="height: 40rem">
+            <img src="./images/mr-chandrashekhar-tiwari-5d43cc20e1b2a.jpg" class="card-img-top" alt="..." height="250" width="20" style="border-radius: 50%; padding: 0px;">
+            <div class="card-body">
+                <h5 class="card-title"><b> Chandrashekhar Tiwari </b> <br> Clinical Psychologist</h5>
+                <p class="card-text">11+ years of experience working with clinical population on various emotional disorders and de-addiction cases</p>
+            </div>
+        </div>
+        <div class="card box" style="height: 40rem">
+          <img src="./images/25-Dr.-Archana-Tyagi.jpg" class="card-img-top" alt="..." height="250" width="20" style="border-radius: 50%; padding: 0px;">
+          <div class="card-body">
+            <h5 class="card-title"><b> Dr Archana Tyagi </b> <br> ACC(ICF) Coach, Psychologist</h5>
+            <p class="card-text">30+ years of experience coaching, training and counseling individuals across various corporates and colleges</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <center><button class="btn btn-danger" style="text-align: center; ">BROWSE ALL EXPERTS</button></center>
+      <br>
+    </div>
+    <br>
+
+    <!------------------------------------------programs-------------------------------------->
+    <div class="container">
+        <h2 style="text-align: center; line-height: 3rem;">Research backed Personalised Programs
+        </h2>
+    <h5 style="text-align: center;">We bring you personalised development programs that are backed by research, and crafted from the years of experience in counselling that our experts bring in.
+    </h5>
+    <div class="row">
+
+    <div class="containerr box">
+        <img src="./images/undraw_career_progress_ivdb.png" class="card-img-top" alt="Avatar" class="image">
+        <div class="card-body">
+            <h5 class="card-title" style="color: black;"><b> Make better Career decisions </b></h5>
+            <p class="card-text"><small class="text-muted">Recommended diration: 2 weeks</small></p>
+        </div>
+        <div class="overlay">
+          <div class="text" >
+            Make better Career decisions <br>
+            <p style="font-size: 12px;">Career Counselling Program with a dedicated coach for advice & support for decisions related to career shift, what after 12th std or choosing the right career.
+               <br><br> Recommended Duration : 2 weeks</p>
+            Explore
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerr box">
+        <img src="./images/undraw_around_the_world_v9nu.png" class="card-img-top" alt="Avatar" class="image">
+        <div class="card-body">
+            <h5 class="card-title" style="color: black;"><b> Become a more confident you </b></h5>
+            <p class="card-text"><small class="text-muted">Recommended diration: 4 weeks</small></p>
+        </div>
+        <div class="overlay">
+          <div class="text" >
+            Become a more confident you<br>
+            <p style="font-size: 12px;">Complete online counselling program including a dedicated coach to help you boost your self confidence for public speaking, job interviews, presentation skills, etc.
+               <br><br> Recommended Duration : 4 weeks</p>
+            Explore
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerr box">
+        <img src="./images/undraw_wedding_t1yl.png" class="card-img-top" alt="Avatar" class="image">
+        <div class="card-body">
+            <h5 class="card-title" style="color: black;"><b> Overcome pre-wedding jitters </b></h5>
+            <p class="card-text"><small class="text-muted">Recommended diration: 4 weeks</small></p>
+        </div>
+        <div class="overlay">
+          <div class="text" >
+            Overcome pre-wedding jitters <br>
+            <p style="font-size: 12px;">Customised program with a dedicated coach to help you with all premarital issues. Program includes chat & voice call sessions with licensed therapist.
+               <br><br> Recommended Duration : 4 weeks</p>
+            Explore
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerr box">
+        <img src="./images/undraw_together_j0gj.png" class="card-img-top" alt="Avatar" class="image">
+        <div class="card-body">
+            <h5 class="card-title" style="color: black;"><b> Strengthen martial relationship </b></h5>
+            <p class="card-text"><small class="text-muted">Recommended diration: 5 weeks</small></p>
+        </div>
+        <div class="overlay">
+          <div class="text" >
+            Strengthen martial relationship <br>
+            <p style="font-size: 12px;">Couples therapy program with a dedicated licensed therapist to help married couples or individuals with postmarital problems & tips to lead a happy marriage life.
+               <br><br> Recommended Duration : 5 weeks</p>
+            Explore
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerr box">
+        <img src="./images/undraw_Gardening_eaf3.png" class="card-img-top" alt="Avatar" class="image">
+        <div class="card-body">
+            <h5 class="card-title" style="color: black;"><b> Grieving and Growing </b></h5>
+            <p class="card-text"><small class="text-muted">Recommended diration: 6 weeks</small></p>
+        </div>
+        <div class="overlay">
+          <div class="text" >
+            Grieving and Growing <br>
+            <p style="font-size: 12px;">Personalised Grief counselling program with a dedicated coach for helping you cope with loss of someone which includes interactive sessions with therapist.
+               <br><br> Recommended Duration : 6 weeks</p>
+            Explore
+          </div>
+        </div>
+      </div>
+      
+      <div class="containerr" style="  margin-top: 10vh; margin-left: 5vw;">
+        <img src="./images/undraw_powerful_26ry.png" class="card-img-top" alt="Avatar" class="image" height="100%" width="100%">
+     </div>
+     
+      
+     
+    </div>
+    <br>
+    <center><button class="btn btn-danger" style="text-align: center; ">SEE ALL PROGRAMS</button></center>
+    <br>
+    </div>
+    <!------------------------------------------blogs-------------------------------------->
+    <div class="" style="background-color: rgb(250, 233, 234);"> <br>
+        <h1 style="text-align: center; line-height: 3rem;">Latest on YourDost Blog</h1>
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col col-md-6 col-xs-12">  -->
+                        <div class="card boxx">
+                            <img src="./images/stress.jpeg" class="card-img-top" alt="..." height="200"  >
+                            <div class="card-body">
+                                Article
+                              <h5 class="card-title"><b>7 Signs That Show You Have Way Too Much Stress In Your Life</b><br> </h5>
+                              <p class="card-text" style="background-color: rgb(253, 200, 207); width: 14%; padding: 2px;">advice</p>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="col col-md-6 col-xs-12"> -->
+                        <div class="card boxx">
+                            <img src="./images/aware.jpeg" class="card-img-top" alt="..." height="200"  >
+                            <div class="card-body">
+                                Article
+                              <h5 class="card-title"><b>How I Take On Depression Everyday to Help Spread Awareness About Mental Health</b><br> </h5>
+                              <p class="card-text" style="background-color: rgb(253, 200, 207); width: 22%; padding: 2px;">homepage</p>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="col col-md-6 col-xs-12"> -->
+                        <div class="card boxx">
+                            <img src="./images/counsel.jpg" class="card-img-top" alt="..." height="200"  >
+                            <div class="card-body">
+                                Article
+                              <h5 class="card-title"><b>6 Ways To Distinguish Counseling from Plain Advice</b><br> </h5>
+                              <p class="card-text" style="background-color: rgb(253, 200, 207); width: 22%; padding: 2px;">homepage</p>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="col col-md-6 col-xs-12"> -->
+                        <div class="card boxx">
+                            <img src="./images/advice.jpeg" class="card-img-top" alt="..." height="200"  >
+                            <div class="card-body">
+                                Article
+                              <h5 class="card-title"><b>5 Tips To Encourage Your Loved One to Start Counseling</b><br> </h5>
+                              <p class="card-text" style="background-color: rgb(253, 200, 207); width: 37%; padding: 2px;">family-and-friends</p>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+               
+              
+                </div>
+
+
+        <br>
+        <center><button class="btn btn-danger" style="text-align: center; ">READ MORE ARTICLES</button></center>
+
+        <br>
+    </div>
+
+    </div>
+<br>
+
+        <!------------------------------------------carousel-------------------------------------->
+        <h1 style="text-align: center;">What do people say?</h1> <br>
+        <div class="slideshow-container">
+
+          <div class="mySlides">
+            <img src="./images/shehbaz_mistry.svg" alt="" height="200" width="200" style="float: left; border-radius: 50%; margin-right: 30px;">
+            <h4 class="author" >
+              I was unemployed for about 2 months. There was a lot of pressure building on me. I had begun to feel that things would not improve in my life. Around this time, I got to know about YourDOST on YouTube I signed up here and then talked to a counsellor. She listened to me carefully and offered genuine advice.. I felt very relieved by sharing my problems. A big THANK YOU to the YourDOST Team!
+            </h4>
+              <h3 >Shehbaz Mistry, Working Professional, Dubai</h3>
+          </div>
+          
+          <div class="mySlides">
+            <img src="./images/Madhuri Nanduri.png" alt="" height="200" width="200" style="float: left; border-radius: 50%; margin-right: 30px;">
+            <h4 class="author" >
+
+              
+              I was suffering from post-partum depression. It was like hell – I had not experienced such mental pain before. I would experience strong urges to commit suicide and to run away from everyone. I felt there was nobody to help me and things were getting worse with each day. I felt that my suffering would never end.Then, I came to know about YourDOST through a newspaper. I immediately went to the website and sent a message to a counsellor. Her reply not only helped me but also gave me hope that my suffering would end. I am much better now. Thank you YourDOST
+              <h3 >              Madhuri Nanduri, Housewife, Hyderabad            </h4>
+              </h3>
+          </div>
+          
+          <div class="mySlides">
+            <img src="./images/shaik_abdul_feroz.svg" alt="" height="200" width="200" style="float: left; border-radius: 50%; margin-right: 30px;">
+            <h4 class="author" >
+              What do people say?
+
+              During B.Tech, I found it difficult to cope up with studies and hence, fell into a spiral of negative thinking and despair. Several backlogs in B.Tech had left me very worried and my life was miserable. When I got to know about YourDOST, I signed up on the website. Earlier, I was a bit hesitant in opening up but they made me comfortable. The counsellors helped me find the root cause of my issues, suggested techniques to overcome stress and negative thinking.In about 4 months, my life has improved a lot. am glad I came forward and shared my problems with them. Thank you YourDOST!
+              <h3 >              Shaik Abdul Feroz, Student, B.Tech            </h4>
+              </h3>
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+          
+          <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+          <br>
+          <center>
+            <button class="btn btn-light" style="text-align: center; ">CHAT ONLINE</button>
+            <button class="btn btn-outline-light" style="text-align: center; ">REFER A FRIEND</button>
+            <button class="btn btn-light" style="text-align: center; ">READ MORE</button>
+  
+          </center>
+          <br>
+          <br>
+          </div>
+            <!------------------------------------------press-------------------------------------->
+            <div class="container">
+                <h1 style="text-align: center; line-height: 3rem;">In the Press </h1>
+                <div class="row" style="padding: 2px;">
+                    <img src="./images/ndtv.png" alt="" height="150" width="200" style="margin-right: 100px;">
+                    <img src="./images/wb.png" alt="" height="100" width="150" style="margin-right: 100px;">
+                    <img src="./images/cnbc.png" alt="" height="100" width="150" style="margin-right: 100px;">
+                    <img src="./images/toi.jpg" alt="" height="130" width="200" style="margin-right: 20px;">
+
+                </div>
+
+            </div>
+
+    <!------------------------------------------Footer-------------------------------------->
+    <br> 
+
+    <main>
+            
+    </main>
+  <!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+  <footer class="flex-rw">
+         
+      <div class="container "> 
+          <div class="row">
+    <ul class="footer-list-top">
+      <li>
+        <h4 class="footer-list-header">COUNSELLING</h4></li>
+      <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Career/Academic</li>
+      <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Friends&Family</li>
+      <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Love-Relationship</li>
+      <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Sexual-wellness</li>
+      <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Self Improvement</li>
+      <li class="generic-anchor footer-list-anchor" itemprop="significantLink"> <a href=""><u>Category Index</u></a> </li>
+
+    </ul>
+    <ul class="footer-list-top">
+      <li>
+        <h4 class="footer-list-header">EXPERTS FROM</h4></li>
+  
+  
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Banglore</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Mumbai</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Delhi</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Pune</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Bhopal</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Hyderabad</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Chennai</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink"> <a href=""><u>Index</u></a> </li>
+
+          
+    </ul>
+    <ul class="footer-list-top">
+      <li id='help'>
+        <h4 class="footer-list-header">USEFUL LINKS</h4></li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Experts</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Most questions asked</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Motivational quotes</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Articles</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">De-stressing techniques</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Press</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Business Offerings</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Become an expert</li>
+        <li class="generic-anchor footer-list-anchor" itemprop="significantLink"> <a href=""><u>Contact Us</u></a> </li>
+
+    </ul>
+    <ul class="footer-list-top">
+          <li>
+            <h4 class="footer-list-header">ABOUT US</h4></li>
+      
+      
+            <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Testimonials</li>
+            <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Teams</li>
+            <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Partners</li>
+            <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Terms of service</li>
+            <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Privacy Policy</li>
+            <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Reports a problem</li>
+            <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Jobs</li>
+            <li class="generic-anchor footer-list-anchor" itemprop="significantLink">Care plan FAQs</li>
+
+    
+        </ul>
+     <ul class="footer-list-top">
+          <div class="btn-group ">
+                <img src="./images/undraw_chat_1wo5.png" alt="" height="100px" width="150px"> <br>
+                  <button type="button" class="btn btn-outline-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Become an Expert
+                  </button> <br>    
+                  <!-- <span class="tooltiptext">Listen to others & be their friend in need</span> -->
+
+                </div>
+
+     </ul>
+        <!-- <p class="footerline1" style="color: white;">
+            <h5 style="color: white;"> YourDOST </h5> <br>
+            <h6 style="color: white;">At YourDOST, we provide an online counseling and emotional support platform designed to foster mental wellness. It anonymously connects you with the right expert consisting of psychologists, psychotherapists, counselors, life coaches, career guides and people with rich and deep life experience, who understand you and guide you through completely confidential individual sessions.</h6>
+        </p> -->
+  </div>
+
+</div>
+
+
+<hr style="background-color: red">
+
+    <section class="footer-bottom-section flex-rw">
+  <div class="footer-bottom-wrapper">   
+  <i class="fa fa-copyright" style="font-size: 10px;" role="copyright">
+   
+  </i> <address class="footer-address" role="company address">2003-2020 YourDOST, Inc.</address><span class="footer-bottom-rights"> </span>
+      
+</div>
+    <p style="font-size:14px; color: white; ">FOLLOW US:</p>
+    <i class="fa fa-facebook-official" style="font-size:24px; color: white; padding: 0.5rem; cursor: pointer;";></i>
+      <i class="fa fa-twitter" style="font-size:24px; color: white; padding: 0.5rem;cursor: pointer;"></i>
+      <i class="fa fa-instagram" style="font-size:24px; color: white; padding: 0.5rem;cursor: pointer;"></i>
+      <i class="fa fa-linkedin-square" style="font-size:24px; color: white; padding: 0.5rem;cursor: pointer;";></i>
+      <i class="fa fa-youtube-play" style="font-size:24px; color: white; padding: 0.5rem;cursor: pointer;";></i>
+      <i class="fa fa-vimeo" style="font-size:24px; color: white; padding: 0.5rem;cursor: pointer;";></i>
+      </div>
+  </section>
+  </footer>
+    
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+      document.getElementById("myBtn").style.display = "none";
+      
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("myBtn").style.display = "block";
+
+    }
+    </script>
+
+
+</body>
+</html>
