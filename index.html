@@ -21,13 +21,12 @@
 <body>
 
 
-    <!-- <button  id="myBtn" class="btn btn-outline-danger">Need help?</button> -->
 
 
 <!------------------------need help button--------------->
 
 
-<button id="myBtn" class="open-button btn btn-outline-danger" onclick="openForm()">Need help?</button>
+<button id="myBtn" class="open-button btn btn-outline-danger" onclick="openForm()" >Need help?</button>
 
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -45,82 +44,89 @@
     
     <!------------------------navbar---------------------->
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light nav_boxshadow">
+        <button class="navbar-toggler" onclick="myfun()" id="navbtn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
       <a class="navbar-brand" href="#">
         <img src="./images/undraw_environment_iaus.png" width="50" height="40" class="d-inline-block align-top" alt="">
         YourDOST
       </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">
-Experts
+            <a class="nav-link nav_bold" href="#">
+EXPERTS
           <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-Discussions 
+            <a class="nav-link nav_bold" href="#">
+DISCUSSIONS 
           <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-COVID-19 Resources 
+            <a class="nav-link nav_bold" href="#">
+COVID-19 RESOURCES 
           <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-Self Test 
+            <a class="nav-link nav_bold" href="#">
+SELF TEST 
           <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-Programs 
+            <a class="nav-link nav_bold" href="#">
+PROGRAMS 
           <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-For Business
+            <a class="nav-link nav_bold" href="#">
+FOR BUSINESS
           <span class="sr-only">(current)</span></a>
-          </li>
+          
           
           
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+      </div>
+        <ul class="navbar-nav ml-auto nav_login">
+          </li>
+          <li class="nav-item">
+           <button type="button" class="btn btn-danger my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" >Login</button>
+           
+          </li>
+        </ul>
+
           <!-- <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button> -->
-          <button type="button" class="btn btn-danger my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" >Login</button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Login form</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          Email/Username :<input type="text"> <br> <br>
-         Password : <input type="password">
 
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger">Login</button>
-      </div>
-    </div>
-  </div>
-</div>
-        </form>
-      </div>
+      
     </nav>
             
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document"  style="width: 300px;">
+        <div class="modal-content" >
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel"><b>Login form</b></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="width: 20rem;">
+            <form>
+              Email/Username :<input type="text"> <br> <br>
+             Password : <input type="password">
+    
+            </form>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            <button type="button" class="btn btn-danger">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
      
           <!------------------------background---------------------->
@@ -129,10 +135,10 @@ For Business
 
         <div class="container position">
             <div class="row" id="back">
-                <h1>Get help. Get better.</h1> 
-                <h3 style="line-height: 3.5rem;" >No matter what's troubling you, get the support you need, right here, right now.</h3 style="line-height: 3.5rem;"> 
-                    <button class="btn btn-danger my-btn btnm" type="submit" >Chat Now</button>
-                    <button class="btn btn-danger btnm" type="submit">Book Appointment</button>
+                <h1 style="font-size: 5rem;">Get help. Get better.</h1> 
+                <h3 style="line-height: 3.5rem;color:#636363" >No matter what's troubling you, get the support you need, right here, right now.</h3 style="line-height: 3.5rem;"> 
+                    <button class="btn btn-info my-btn btnm"  data-toggle="modal" data-target="#exampleModal" type="submit" >Chat Now</button>
+                    <button class="btn btn-danger btnm"  data-toggle="modal" data-target="#exampleModal" type="submit">Book Appointment</button>
                 <h5>🔴26 people are currently seeking guidance.</h5>
             </div>
         </div>
@@ -140,22 +146,22 @@ For Business
 
 
         <!------------------------badges---------------------->
-    <div class="container">
+    <div class="container" style="margin-top: 3rem;">
     <div class="row">
         <div class=" col-md-3 col-xs-6">
-         <center><i class="fa fa-id-badge" style="font-size:36px"></i>
+         <center><i class="fa fa-id-badge" style="font-size:36px; color: red;"></i>
           <p>PRIVATE & CONFIDENTIAL</p></center> 
         </div>
         <div class="col-md-3 col-xs-6">
-         <center> <i class='fas fa-glasses' style='font-size:36px; text-align: center;'></i>
+         <center> <i class='fas fa-glasses' style='font-size:36px; text-align: center;color:#31b0d5'></i>
           <p>ANONYMOUS DISCUSSIONS</p> </center>
         </div>
         <div class="col-md-3 col-xs-6">
-         <center><i class='fas fa-stopwatch' style='font-size:36px'></i>
+         <center><i class='fas fa-stopwatch' style='font-size:36px; color: red;'></i>
           <p>24X7 ROUND THE CLOCK SUPPORT</p></center> 
         </div>
         <div class="col-md-3 col-xs-6">
-         <center><i class="fa fa-laptop" style="font-size:36px"></i>
+         <center><i class="fa fa-laptop" style="font-size:36px; color: #31b0d5;"></i>
           <p>CONDUCTED OVER 25 LAKHS+ SESSIONS</p> </center> 
         </div>
     </div>
@@ -218,18 +224,12 @@ For Business
 
     <!------------------------------------------experts-------------------------------------->
 
-    <div class="" style="background-image:linear-gradient(white,rgb(221, 221, 221),rgb(253, 227, 231));"> <br>
+    <div class="" style="background-image:linear-gradient(white,rgb(251, 251, 251),rgb(253, 227, 231));"> <br>
     <h2 style="text-align: center; line-height: 3rem;">Find Instant Support</h2>
     <h5 style="text-align: center;">1000+ Experts with years of experience in counselling and successfully helping people overcome their emotions</h5>
     
     <div class="row">
-        <!-- <div class="card box col-md-4 col-xs-12" style="height: 40rem">
-            <img src="./images/dr-jini-k-gopinath-1482473101-585cbe8e01267.jpg" class="card-img-top" alt="..." height="250" " style="border-radius: 50%; padding: 0px; ">
-            <div class="card-body">
-              <h5 class="card-title"><b> Dr. Jini K. Gopinath</b><br> Clinical Psychologist, Hypnotherapist</h5>
-              <p class="card-text">Over 2-decade experience in building resilient organisations, high performing teams and happier individuals</p>
-            </div>
-        </div> -->
+       
         <div class=" box col-md-3 col-xs-12">
          <center> <img src="./images/dr-jini-k-gopinath-1482473101-585cbe8e01267.jpg" class="card-img-top imagee" alt="Avatar" >          <div class="card-body">
             <h5 class="card-title"><b> Dr. Jini K. Gopinath</b><br> Clinical Psychologist, Hypnotherapist</h5>
@@ -253,20 +253,7 @@ For Business
           </div>
         </center> 
         </div>
-        <!-- <div class="card box col-md-4 col-xs-12" style="height: 40rem">
-            <img src="./images/mr-chandrashekhar-tiwari-5d43cc20e1b2a.jpg" class="card-img-top" alt="..." height="250" width="20" style="border-radius: 50%; padding: 0px;">
-            <div class="card-body">
-                <h5 class="card-title"><b> Chandrashekhar Tiwari </b> <br> Clinical Psychologist</h5>
-                <p class="card-text">11+ years of experience working with clinical population on various emotional disorders and de-addiction cases</p>
-            </div>
-        </div>
-        <div class="card box col-md-4 col-xs-12" style="height: 40rem">
-          <img src="./images/25-Dr.-Archana-Tyagi.jpg" class="card-img-top" alt="..." height="250" width="20" style="border-radius: 50%; padding: 0px;">
-          <div class="card-body">
-            <h5 class="card-title"><b> Dr Archana Tyagi </b> <br> ACC(ICF) Coach, Psychologist</h5>
-            <p class="card-text">30+ years of experience coaching, training and counseling individuals across various corporates and colleges</p>
-          </div>
-        </div> -->
+       
       </div>
 
       <br>
@@ -372,8 +359,9 @@ For Business
     <center><button class="btn btn-danger" style="text-align: center; ">SEE ALL PROGRAMS</button></center>
     <br>
     </div>
+    <!-- #285f2aab; colr -->
     <!------------------------------------------blogs-------------------------------------->
-    <div class="" style="background-image:linear-gradient(rgb(253, 246, 247),rgb(221, 221, 221),rgb(253, 246, 247));"> <br>
+    <div class="" style="background-image:linear-gradient(rgb(253, 246, 247),rgb(253, 253, 253),rgb(253, 246, 247));"> <br>
         <h1 style="text-align: center; line-height: 3rem;">Latest on YourDost Blog</h1>
             <div class="container">
                 <div class="row">
@@ -473,7 +461,7 @@ For Business
           </div>
           <br>
           <center>
-            <button class="btn btn-light" style="text-align: center; ">CHAT ONLINE</button>
+            <button class="btn btn-danger" style="text-align: center; ">CHAT ONLINE</button>
             <button class="btn btn-outline-light" style="text-align: center; ">REFER A FRIEND</button>
             <button class="btn btn-light" style="text-align: center; ">READ MORE</button>
   
@@ -485,10 +473,10 @@ For Business
             <div class="container">
                 <h1 style="text-align: center; line-height: 3rem;">In the Press </h1>
                 <div class="row" style="padding: 2px;">
-                    <img src="./images/ndtv.png" alt="" height="150" width="200" style="margin-right: 100px;">
-                    <img src="./images/wb.png" alt="" height="100" width="150" style="margin-right: 100px;">
-                    <img src="./images/cnbc.png" alt="" height="100" width="150" style="margin-right: 100px;">
-                    <img src="./images/toi.jpg" alt="" height="130" width="200" style="margin-right: 20px;">
+                    <img src="./images/ndtv.png" alt="" height="150" width="200" style="margin-right: 100px;margin: auto;">
+                    <img src="./images/wb.png" alt="" height="100" width="150" style="margin-right: 100px;margin: auto;">
+                    <img src="./images/cnbc.png" alt="" height="100" width="150" style="margin-right: 100px;margin: auto;">
+                    <img src="./images/toi.jpg" alt="" height="130" width="200" style="margin-right: 20px;margin: auto;">
 
                 </div>
 
@@ -500,7 +488,6 @@ For Business
     <main>
             
     </main>
-  <!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
   <footer class="flex-rw">
          
       <div class="container "> 
@@ -568,15 +555,11 @@ For Business
                   <button type="button" class="btn btn-outline-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Become an Expert
                   </button> <br>    
-                  <!-- <span class="tooltiptext">Listen to others & be their friend in need</span> -->
 
                 </div>
 
      </ul>
-        <!-- <p class="footerline1" style="color: white;">
-            <h5 style="color: white;"> YourDOST </h5> <br>
-            <h6 style="color: white;">At YourDOST, we provide an online counseling and emotional support platform designed to foster mental wellness. It anonymously connects you with the right expert consisting of psychologists, psychotherapists, counselors, life coaches, career guides and people with rich and deep life experience, who understand you and guide you through completely confidential individual sessions.</h6>
-        </p> -->
+      
   </div>
 
 </div>
@@ -591,7 +574,7 @@ For Business
   </i> <address class="footer-address" role="company address">2003-2020 YourDOST, Inc.</address><span class="footer-bottom-rights"> </span>
       
 </div>
-    <p style="font-size:14px; color: white; ">FOLLOW US:</p>
+    <p style="font-size:14px; color: white; margin-top: 1rem !important; ">FOLLOW US :</p>
     <i class="fa fa-facebook-official" style="font-size:24px; color: white; padding: 0.5rem; cursor: pointer;";></i>
       <i class="fa fa-twitter" style="font-size:24px; color: white; padding: 0.5rem;cursor: pointer;"></i>
       <i class="fa fa-instagram" style="font-size:24px; color: white; padding: 0.5rem;cursor: pointer;"></i>
@@ -601,7 +584,6 @@ For Business
       </div>
   </section>
   </footer>
-
 
 </body>
 </html>
